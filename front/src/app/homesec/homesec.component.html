@@ -1,0 +1,74 @@
+
+
+<div class="container">
+
+<h2>Appointment List</h2>
+<a style="color: rgb(86, 86, 86); font-size: x-large;">Welcome to Appointment list page. Click Add Appointments to Add appointments</a>
+  <hr>
+  <div class="row">
+    <a class="btn text-white" style="background-color: #55acee;margin-bottom: 50px;" role="button"  [routerLink]="['/home/createappointment']"> 
+        <i class="fa fa-user-plus" aria-hidden="true"></i>
+        Add appointments
+      </a>
+</div>
+<table class="table table-striped">
+    <thead class="table-header">
+        <tr>
+            <th> ID </th>
+            <th> Id_Patient </th>
+            <th> Id_Docteurr </th>
+            <th> Date</th>
+            <th> Statut</th>
+
+            
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let appointment of appointments">
+            <td> {{ appointment.idapp }} </td>
+            <td> {{ appointment.iddoctor }} </td>
+            <td> {{ appointment.idpatient }} </td>
+            <td> {{ appointment.date }} </td>
+            <td> {{ appointment.statut }} </td>
+
+            <td>
+                <button (click)="acceptAppointment(appointment.idapp)" class="btn btn-outline-success">Accepter</button>
+                <button (click)="deleteAppointment(appointment.idapp)" class="btn btn-outline-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+            
+        </tr>
+        
+</table>
+<table class="table table-striped">
+    <thead class="table-header">
+        <tr>
+            <th colspan="3" >Prescriptions list</th>
+        </tr>
+        <tr>
+            
+            <th> Id_Patient </th>
+            <th> Id_Docteurr </th>
+            <th> Medicines</th>
+            
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of medicines">
+            
+            <td> {{ p.id_p }} </td>
+            <td> {{ p.id_d }} </td>
+            <td> {{ p.text }} </td>
+
+            <td>
+                <button (click)="deletept(p.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+            
+        </tr>
+        
+</table>
+</div>
+

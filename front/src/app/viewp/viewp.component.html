@@ -1,0 +1,40 @@
+
+<div class="container">
+    <h3 style="align-items: center;justify-content: center;display: flex;" >Patient  Details</h3>
+<div id="h">
+    <div><img src="../../assets/iim.png" alt=""></div>
+
+<div id="h1">
+<div>
+    <label> <b>  First Name: </b></label> {{patient.firstname}}
+</div>
+
+<div>
+    <label> <b>Last Name: </b></label> {{patient.lastname}}
+</div>
+
+<div>
+    <label> <b> Gender :</b></label> {{patient.gender}}
+</div>
+
+<div>
+    <label> <b> Email :</b></label> {{patient.email}}
+</div>
+
+<div>
+    <label> <b> Number: </b></label> {{patient.number}}
+</div>
+
+</div>
+
+
+</div>
+</div>
+<div>
+<h2>My appointments</h2>
+<ul>
+  <li *ngFor="let appointment of appointments">
+    Date et heure: {{ appointment.date }} - Statut: {{ appointment.statut }}
+  </li>
+</ul>
+</div>

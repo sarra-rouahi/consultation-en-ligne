@@ -1,0 +1,11 @@
+#imgg{
+    width: 100px;
+    height: 90px;
+   }
+   a:hover{
+    background-color: aliceblue;
+    border-radius: 20px;
+   }
+   #t{
+    margin-right: 40px;
+   }

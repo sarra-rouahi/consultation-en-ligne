@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor</title>
+    <style>
+     div{
+       
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+     }
+     *{
+        height: 100%;
+     }
+     .btn{display: flex;flex-direction: column;margin-bottom: 20px;}
+    </style>
+</head>
+<body>
+    <div>
+        <br>
+<div class="btn" style="margin: auto;">
+    <h1>Register as ...</h1>
+
+    <button (click)="f1()" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2" style="background-color: rgb(64,123,255);border: 0;" >Patient</button>
+    <button (click)="f2()" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2" style="background-color: rgb(64,123,255);border: 0;">Doctor</button>
+    <button (click)="f3()" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2" style="background-color: rgb(64,123,255);border: 0;">Secretary</button>
+</div>
+<div class="col-md-9 col-lg-6 col-xl-5">
+    <img src="assets/imglogin.png"
+      class="img-fluid" alt="Sample image">
+  </div>
+</div>
+</body>
+</html>

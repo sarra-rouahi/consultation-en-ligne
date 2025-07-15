@@ -1,0 +1,27 @@
+/* notifications.component.css */
+.notification {
+    padding: 1em;
+    margin: 1em;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .notification.success {
+    background-color: #4caf50;
+  }
+  
+  .notification.error {
+    background-color: #f44336;
+  }
+  
+  .notification.info {
+    background-color: #2196f3;
+  }
+  
+  .notification.warning {
+    background-color: #ff9800;
+  }
+  

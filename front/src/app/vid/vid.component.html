@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebRTC Video Call</title>
+</head>
+<body>
+  <video id="localVideo" autoplay></video>
+  <video id="remoteVideo" autoplay></video>
+
+  <script>
+    const localVideo = document.getElementById('localVideo');
+    const remoteVideo = document.getElementById('remoteVideo');
+    const servers = null; // Use default STUN servers
+
+    const localPeerConnection = new RTCPeerConnection(servers);
+    const remotePeerConnection = new RTCPeerConnection(servers);
+
+    // Get local media stream
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+      .then(stream => {
+        localVideo.srcObject = stream;
+        localPeerConnection.addStream(stream);
+      })
+      .catch(error => console.error('Error accessing media devices.', error));
+
+    localPeerConnection.onicecandidate = ({ candidate }) => {
+      if (candidate) {
+        remotePeerConnection.addIceCandidate(candidate);
+      }
+    };
+
+    remotePeerConnection.onicecandidate = ({ candidate }) => {
+      if (candidate) {
+        localPeerConnection.addIceCandidate(candidate);
+      }
+    };
+
+    remotePeerConnection.onaddstream = ({ stream }) => {
+      remoteVideo.srcObject = stream;
+    };
+
+    localPeerConnection.createOffer()
+      .then(offer => localPeerConnection.setLocalDescription(offer))
+      .then(() => remotePeerConnection.setRemoteDescription(localPeerConnection.localDescription))
+      .then(() => remotePeerConnection.createAnswer())
+      .then(answer => remotePeerConnection.setLocalDescription(answer))
+      .then(() => localPeerConnection.setRemoteDescription(remotePeerConnection.localDescription))
+      .catch(error => console.error('Error creating WebRTC connection.', error));
+  </script>
+</body>
+</html>

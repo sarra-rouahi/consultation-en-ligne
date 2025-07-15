@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="p1">
+            <h1>Welcome</h1>
+            <h2>Prenez soin de votre santé depuis chez vous !</h2>
+           <p>Notre plateforme de consultation en ligne vous permet de bénéficier d'un suivi médical de qualité, dans le confort de votre foyer. Que vous ayez besoin d'une consultation générale, d'un renouvellement d'ordonnance ou d'un suivi de pathologie chronique, nos médecins qualifiés sont à votre disposition pour vous accompagner.</p>
+
+        </div>
+        <div class="p2">
+            <div class="row">
+                <a class="btn text-white" style="background-color: #55acee;margin-bottom: 50px; display: flex;justify-content: center;align-items: center;margin-top: 50px;margin-left: 200px;" role="button"  [routerLink]="['/home/update']"> 
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    Update your profile
+                  </a>
+            </div>
+            <div class="row">
+                <a class="btn text-white" style="background-color: #55acee;margin-bottom: 50px;margin-top: 50px;margin-left: 200px;" role="button"  [routerLink]="['/home/createappointment']"> 
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                   Ask for an appointment
+                  </a>
+            </div>
+            <div class="row">
+                <a class="btn text-white" style="background-color: #55acee;margin-bottom: 50px;margin-top: 50px;margin-left: 200px;" role="button"  [routerLink]="['/home/view',id]"> 
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  Check  my profile and
+                  <br> my appointment's statut
+                  </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

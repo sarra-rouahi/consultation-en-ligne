@@ -1,0 +1,33 @@
+
+
+
+
+<div class="container">
+  
+<h2>Prescription  List</h2>
+<a style="color: rgb(86, 86, 86); font-size: x-large;" >Welcome to Prescription list page. Click  to Add a Prescription</a>
+  <hr>
+<table class="table table-striped">
+
+    <thead class="table-header">
+        <tr>
+            <th> Id Doctor </th>
+            <th> Id Patient </th>
+            <th> Medicines </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pres of pres">
+            <td> {{ pres.id_p }} </td>
+            <td> {{ pres.id_d }} </td>
+            <td> {{ pres.text }} </td>
+
+            <td>
+                <button (click)="updateMedicine(pres.id)" class="btn btn-info"> Update </button>
+                <button (click)="deleteMedicine(pres.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+        
+</table>
+</div>

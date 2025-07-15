@@ -1,0 +1,129 @@
+<section id="section" class="h-100 bg-white">
+    <div class="container py-5 h-100" >
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4"  style="border: 0;">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="assets/imglogin.png"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;width: 100%;height: 100%;margin: auto;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase"> Registration form</h3>
+                  <div id="center" class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                    <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                      <i class="fa fa-google" aria-hidden="true"></i>
+                    </button>
+                     &nbsp; &nbsp; &nbsp; &nbsp;
+                    <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
+                      <i class="fa fa-github" aria-hidden="true"></i>
+                    </button>
+        
+                   
+                  </div>
+                  <div class="divider d-flex align-items-center my-4">
+                   
+                    <p class="text-center fw-bold mx-3 mb-0">Or</p>
+
+                  </div>
+                  <form #registerform="ngForm" >
+        
+                  
+                  <div class="row">
+                    <div class="col-md-4 mb-2">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="firstname" class="form-control form-control-lg" ngModel name="firstname" />
+                        <label class="form-label" for="firstname">First name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="text" id="lastname" class="form-control form-control-lg" ngModel name="lastname" />
+                        <label class="form-label" for="lastname">Last name</label>
+                      </div>
+                    </div>
+                      
+                  
+            </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div data-mdb-input-init class="form-outline">
+                          <input type="tel" id="phonenumber" class="form-control form-control-lg" name="phonenumber" ngModel required />
+                          <label class="form-label" for="phonenumber">Phone number</label>
+                        </div>
+                      </div>
+                    
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="email" id="email" class="form-control form-control-lg" ngModel name="email"  required/>
+                        <label class="form-label" for="email">Email</label>
+                      </div>
+                    </div>
+                   
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="password" id="pwd" class="form-control form-control-lg" ngModel name="password" required />
+                        <label class="form-label" for="pwd" >Password</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <input type="password" id="form3Example1n1" class="form-control form-control-lg" ngModel name="confirmpw" required/>
+                        <label class="form-label" for="form3Example1n1">Confirm your password</label>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <input type="text" id="adr" class="form-control form-control-lg" ngModel name="adress"/>
+                    <label class="form-label" for="adr">Address</label>
+                  </div>
+  
+                  <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+  
+                    <h6 class="mb-0 me-4">Gender: </h6>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+                        value="female" ngModel />
+                      <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" name="gender" id="maleGender"
+                        value="male" ngModel />
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0">
+                      <input class="form-check-input" type="radio" name="gender" id="otherGender"
+                        value="other" ngModel />
+                      <label class="form-check-label" for="otherGender">Other</label>
+                    </div>
+  
+                  </div>
+                  
+                
+                </form>
+                  
+  
+                  <div class="d-flex justify-content-center pt-10">
+                  
+                    <button (click)="ajouterpersonne(registerform)" type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2" style="background-color: rgb(64,123,255);border: 0;">Submit form</button>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,32 @@
+
+<div class="container">
+
+<h2>Ask for a New Appointment</h2>
+<form (ngSubmit)="requestAppointment()">
+
+    <div class="form-group">
+        <label>ID</label>
+        <input type="number" class="form-control" id="id" [(ngModel)]="appointment.idapp" name="id" placeholder="Enter ID">
+    </div>
+
+    <div class="form-group">
+        <label>Id doctor</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="appointment.iddoctor" name="name" placeholder="Enter Name">
+    </div>
+
+    <div class="form-group">
+        <label>IdPatient</label>
+        <input type="text" class="form-control" id="age" [(ngModel)]="appointment.idpatient" name="age" placeholder="Enter Age">
+    </div>
+
+    <div class="form-group">
+        <label>Date</label>
+        <input type="text" class="form-control" id="symptoms" [(ngModel)]="appointment.date" name="symptoms" placeholder="Enter Symptoms">
+    </div>
+
+    
+
+    <button class="btn btn-success" style="background-color: #47b2e4;margin: auto;display: flex;justify-content: center;align-items: center;margin-top: 20px;" type="submit">Submit</button>
+
+</form>
+</div>
