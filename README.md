@@ -1,4 +1,4 @@
-# 🩺 Consultation en Ligne — Online Medical Consultation Platform (Front-end)
+# 🩺 Consultation en Ligne — Online Medical Consultation Platform 
 
 A full-featured  web application for managing online medical consultations — connecting **patients**, **doctors**, and **secretaries** through role-based dashboards, appointment scheduling, digital prescriptions, real-time notifications, and a browser-based **WebRTC video consultation** module.
 
@@ -23,13 +23,14 @@ A full-featured  web application for managing online medical consultations — c
 | Layer | Technology |
 |---|---|
 | Framework | **Angular 16** (CLI 16.1.4) |
+| Backend | Springboot |
 | Language | **TypeScript** |
 | Styling | Bootstrap 5, Font Awesome, custom CSS |
 | HTTP Layer | `@angular/common/http` (`HttpClient`), RxJS |
 | Real-time communication | `socket.io-client` |
 | Video calls | Native **WebRTC** (`RTCPeerConnection`) |
 | UX feedback | SweetAlert2 |
-| Testing | Karma + Jasmine |
+
 
 ---
 
@@ -45,7 +46,7 @@ The application is built around a simple object model shared across the UI:
 - **User** — base entity (id, name, email, password, phone, gender)
 - **Patient**, **Doctor**, **Secretary** — extend `User` with role-specific fields (speciality/department for doctors, birthdate/address for patients, department for secretaries)
 - **Appointment** — links a patient and a doctor with a date and a status (`requested → accepted → completed`)
-- **Press (Prescription)** — links a patient and a doctor with prescription text
+- **Prescription** — links a patient and a doctor with prescription text
 
 ---
 
