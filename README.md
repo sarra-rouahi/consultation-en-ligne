@@ -1,8 +1,8 @@
 # 🩺 Consultation en Ligne — Online Medical Consultation Platform (Front-end)
 
-A full-featured **Angular** web application for managing online medical consultations — connecting **patients**, **doctors**, and **secretaries** through role-based dashboards, appointment scheduling, digital prescriptions, real-time notifications, and a browser-based **WebRTC video consultation** module.
+A full-featured  web application for managing online medical consultations — connecting **patients**, **doctors**, and **secretaries** through role-based dashboards, appointment scheduling, digital prescriptions, real-time notifications, and a browser-based **WebRTC video consultation** module.
 
-> ⚠️ **Note:** This repository showcases the **front-end** of the application. The original back-end (REST API) is no longer available in this repository. The UI/UX, component architecture, and client-side logic below remain fully functional and demonstrate the complete feature set of the platform.
+
 
 ---
 
